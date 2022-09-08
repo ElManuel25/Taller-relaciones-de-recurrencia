@@ -1,13 +1,13 @@
-def secuencia1(n):
+def secuencia1(n):  #Cada vez aumenta en 1 lo que se le suma
     A0 = 0
     for i in range(0, n):
         A0 += i
         i+=1
-    print(A0)
+    print(A0)  
         
 #secuencia1(3)
 
-def secuencia2(n , i=1):
+def secuencia2(n , i=1): #Cada vez se van sumando cantidades impares
     A0 = 0
     cont = 0
     while cont < n:
@@ -33,7 +33,7 @@ def sec3(n):
 print(sec3(5))
 
 
-def secuencia4(n):
+def secuencia4(n):  #Cada vez se suman múltiplos de 12
     A0 = 1
     for i in range(0, n):
         A0 += i*12
