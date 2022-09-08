@@ -1,0 +1,43 @@
+def secuencia1(n):
+    A0 = 0
+    for i in range(0, n):
+        A0 += i
+        i+=1
+    print(A0)
+        
+#secuencia1(3)
+
+def secuencia2(n , i=1):
+    A0 = 0
+    cont = 0
+    while cont < n:
+        if i%2 != 0:
+            A0 += i
+            cont += 1
+        i+=1
+    print(A0)
+
+#secuencia2(5)    
+
+
+def sec3(n):
+    if n == 1:
+        return 1
+    if n == 2:
+        return 5
+    else:
+        return ((sec3(n-1) - sec3(n-2))  + 3) + sec3(n-1) #Es la diferencia entre los 2 anteriores + 3
+    
+    
+    
+print(sec3(5))
+
+
+def secuencia4(n):
+    A0 = 1
+    for i in range(0, n):
+        A0 += i*12
+        i+=1
+    print(A0)
+    
+#secuencia4(5)
