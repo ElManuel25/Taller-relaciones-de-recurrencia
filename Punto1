@@ -1,36 +1,29 @@
-def secuencia1(n):  #Cada vez aumenta en 1 lo que se le suma
-    A0 = 0
-    for i in range(0, n):
-        A0 += i
-        i+=1
-    print(A0)  
-        
-#secuencia1(3)
-
-def secuencia2(n , i=1): #Cada vez se van sumando cantidades impares
-    A0 = 0
-    cont = 0
-    while cont < n:
-        if i%2 != 0:
-            A0 += i
-            cont += 1
-        i+=1
-    print(A0)
-
-#secuencia2(5)    
+def secuencia1(n):  #Cada vez se suma 1 más que lo que se sumó en lo anterior
+    if n == 1:
+        return 1
+    else:
+        return n + secuencia1(n-1) 
+                
+print(f"El 9no elemento de la secuencia 1 es: {secuencia1(9)}")
 
 
-def sec3(n):
+def secuencia2(n): #Las figuras estpan formadas por n al cuadrado puntos
+    return n**2
+
+print(f"El 9no elemento de la secuencia 2 es: {secuencia2(9)}")
+
+
+def secuencia3(n):
     if n == 1:
         return 1
     if n == 2:
         return 5
     else:
-        return ((sec3(n-1) - sec3(n-2))  + 3) + sec3(n-1) #Es la diferencia entre los 2 anteriores + 3
+        return ((secuencia3(n-1) - secuencia3(n-2))  + 3) + secuencia3(n-1) #Es la diferencia entre los 2 anteriores + 3
     
     
     
-print(sec3(5))
+print(f"El 9no elemento de la secuencia 3 es: {secuencia3(9)}")
 
 
 def secuencia4(n):  #Cada vez se suman múltiplos de 12
@@ -38,6 +31,6 @@ def secuencia4(n):  #Cada vez se suman múltiplos de 12
     for i in range(0, n):
         A0 += i*12
         i+=1
-    print(A0)
+    return A0
     
-#secuencia4(5)
+print(f"El 9no elemento de la secuencia 4 es: {secuencia4(9)}")
