@@ -1,3 +1,6 @@
+print("Punto 1")
+print("=======")
+
 def secuencia1(n):  #Cada vez se suma 1 más que lo que se sumó en lo anterior
     if n == 1:
         return 1
@@ -34,3 +37,11 @@ def secuencia4(n):  #Cada vez se suman múltiplos de 12
     return A0
     
 print(f"El 9no elemento de la secuencia 4 es: {secuencia4(9)}")
+
+print("=======")
+print("Punto 3")
+
+def interes_anual(años): 
+    return 3500000*(1.0271)**años 
+print(f"A los 84 meses, es decir, 7 años la cuenta tendrá {interes_anual(7)} pesos")
+    
